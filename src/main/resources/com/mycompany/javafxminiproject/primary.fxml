@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.mycompany.javafxminiproject.PrimaryController"
+           style="-fx-background-color: #1a1f2e;">
+  <children>
+    <VBox>
+
+      <!-- NAVBAR -->
+      <HBox prefHeight="52"
+            style="-fx-background-color: #1e2540; -fx-border-color: rgba(255,255,255,0.06); -fx-border-width: 0 0 1 0;"
+            alignment="CENTER_LEFT" spacing="12">
+        <padding><Insets left="20" right="20"/></padding>
+        <Rectangle width="28" height="28" arcWidth="12" arcHeight="12" fill="#4f8ef7"/>
+        <Label text="MyApp" style="-fx-text-fill: #e8eaf6; -fx-font-size: 14; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Home" style="-fx-background-color: rgba(255,255,255,0.07); -fx-text-fill: #a0aec0; -fx-font-size: 12; -fx-background-radius: 20; -fx-cursor: hand; -fx-border-color: rgba(255,255,255,0.1); -fx-border-radius: 20;"/>
+        <Button text="Dashboard" style="-fx-background-color: #4f8ef7; -fx-text-fill: white; -fx-font-size: 12; -fx-background-radius: 20; -fx-cursor: hand;"/>
+        <Button text="Settings" style="-fx-background-color: rgba(255,255,255,0.07); -fx-text-fill: #a0aec0; -fx-font-size: 12; -fx-background-radius: 20; -fx-cursor: hand; -fx-border-color: rgba(255,255,255,0.1); -fx-border-radius: 20;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField promptText="Search..." prefWidth="160"
+                   style="-fx-background-color: rgba(255,255,255,0.07); -fx-text-fill: #e8eaf6; -fx-prompt-text-fill: #6b7a99; -fx-background-radius: 8; -fx-font-size: 12;"/>
+        <StackPane>
+          <Circle radius="15" fill="#e05c5c"/>
+          <Label text="AS" style="-fx-text-fill: white; -fx-font-size: 11; -fx-font-weight: bold;"/>
+        </StackPane>
+      </HBox>
+
+      <!-- BODY -->
+      <HBox VBox.vgrow="ALWAYS">
+
+        <!-- SIDEBAR -->
+        <VBox prefWidth="200" spacing="4"
+              style="-fx-background-color: #16192a; -fx-border-color: rgba(255,255,255,0.05); -fx-border-width: 0 1 0 0;">
+          <padding><Insets top="16" right="12" bottom="16" left="12"/></padding>
+          <Label text="MENU" style="-fx-text-fill: rgba(255,255,255,0.3); -fx-font-size: 10; -fx-font-weight: bold;"/>
+
+          <!-- Overview (aktif) -->
+          <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="38"
+                style="-fx-background-color: rgba(79,142,247,0.15); -fx-border-color: rgba(79,142,247,0.3); -fx-border-radius: 8; -fx-background-radius: 8; -fx-cursor: hand;">
+            <padding><Insets left="12"/></padding>
+            <Label text="⊞" style="-fx-text-fill: #4f8ef7; -fx-font-size: 14;"/>
+            <Label text="Overview" style="-fx-text-fill: #4f8ef7; -fx-font-size: 13; -fx-font-weight: bold;"/>
+          </HBox>
+
+          <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="38" style="-fx-cursor: hand; -fx-background-radius: 8;" >
+            <padding><Insets left="12"/></padding>
+            <Label text="👤" style="-fx-font-size: 13;"/>
+            <Label text="Users" style="-fx-text-fill: #6b7a99; -fx-font-size: 13;"/>
+          </HBox>
+
+          <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="38" style="-fx-cursor: hand; -fx-background-radius: 8;">
+            <padding><Insets left="12"/></padding>
+            <Label text="📊" style="-fx-font-size: 13;"/>
+            <Label text="Analytics" style="-fx-text-fill: #6b7a99; -fx-font-size: 13;"/>
+          </HBox>
+
+          <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="38" style="-fx-cursor: hand; -fx-background-radius: 8;">
+            <padding><Insets left="12"/></padding>
+            <Label text="📄" style="-fx-font-size: 13;"/>
+            <Label text="Reports" style="-fx-text-fill: #6b7a99; -fx-font-size: 13;"/>
+          </HBox>
+
+          <Region VBox.vgrow="ALWAYS"/>
+
+          <HBox alignment="CENTER_LEFT" spacing="10" prefHeight="44"
+                style="-fx-border-color: rgba(255,255,255,0.06); -fx-border-width: 1 0 0 0; -fx-cursor: hand;">
+            <padding><Insets left="12" top="8"/></padding>
+            <Label text="⏻" style="-fx-text-fill: #e05c5c; -fx-font-size: 14;"/>
+            <Label text="Logout" style="-fx-text-fill: #e05c5c; -fx-font-size: 13;"/>
+          </HBox>
+        </VBox>
+
+        <!-- MAIN CONTENT -->
+        <VBox HBox.hgrow="ALWAYS" spacing="16">
+          <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+          <!-- STAT CARDS -->
+          <HBox spacing="12">
+            <VBox spacing="4" HBox.hgrow="ALWAYS"
+                  style="-fx-background-color: #1e2540; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.06); -fx-border-radius: 10;">
+              <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+              <Label text="Total Users" style="-fx-text-fill: #6b7a99; -fx-font-size: 11;"/>
+              <Label text="12,430" style="-fx-text-fill: #e8eaf6; -fx-font-size: 22; -fx-font-weight: bold;"/>
+              <Label text="+8.2% this month" style="-fx-text-fill: #28c840; -fx-font-size: 11;"/>
+            </VBox>
+            <VBox spacing="4" HBox.hgrow="ALWAYS"
+                  style="-fx-background-color: #1e2540; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.06); -fx-border-radius: 10;">
+              <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+              <Label text="Revenue" style="-fx-text-fill: #6b7a99; -fx-font-size: 11;"/>
+              <Label text="Rp 48.5M" style="-fx-text-fill: #e8eaf6; -fx-font-size: 22; -fx-font-weight: bold;"/>
+              <Label text="+12.4% this month" style="-fx-text-fill: #4f8ef7; -fx-font-size: 11;"/>
+            </VBox>
+            <VBox spacing="4" HBox.hgrow="ALWAYS"
+                  style="-fx-background-color: #1e2540; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.06); -fx-border-radius: 10;">
+              <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+              <Label text="Active Sessions" style="-fx-text-fill: #6b7a99; -fx-font-size: 11;"/>
+              <Label text="1,284" style="-fx-text-fill: #e8eaf6; -fx-font-size: 22; -fx-font-weight: bold;"/>
+              <Label text="Live now" style="-fx-text-fill: #f6a041; -fx-font-size: 11;"/>
+            </VBox>
+          </HBox>
+
+          <!-- CHART + RECENT USERS -->
+          <HBox spacing="12" VBox.vgrow="ALWAYS">
+
+            <!-- BAR CHART -->
+            <VBox HBox.hgrow="ALWAYS" spacing="8"
+                  style="-fx-background-color: #1e2540; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.06); -fx-border-radius: 10;">
+              <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+              <Label text="Monthly Activity" style="-fx-text-fill: #e8eaf6; -fx-font-size: 13; -fx-font-weight: bold;"/>
+              <BarChart fx:id="barChart" VBox.vgrow="ALWAYS"
+                        style="-fx-background-color: transparent; -fx-plot-background-color: transparent;"
+                        legendVisible="false" animated="true">
+                <xAxis>
+                  <CategoryAxis style="-fx-tick-label-fill: #6b7a99;"/>
+                </xAxis>
+                <yAxis>
+                  <NumberAxis style="-fx-tick-label-fill: #6b7a99;"/>
+                </yAxis>
+              </BarChart>
+            </VBox>
+
+            <!-- RECENT USERS -->
+            <VBox prefWidth="230" spacing="12"
+                  style="-fx-background-color: #1e2540; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.06); -fx-border-radius: 10;">
+              <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+              <Label text="Recent Users" style="-fx-text-fill: #e8eaf6; -fx-font-size: 13; -fx-font-weight: bold;"/>
+              <ListView fx:id="userListView" VBox.vgrow="ALWAYS"
+                        style="-fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0;"/>
+            </VBox>
+
+          </HBox>
+        </VBox>
+      </HBox>
+    </VBox>
+  </children>
+</StackPane>

@@ -1,0 +1,167 @@
+/* ===== ROOT ===== */
+.rootContainer {
+    -fx-background-color: #1a1f2e;
+}
+
+/* ===== PANEL KIRI ===== */
+.leftPanel {
+    -fx-background-color: #111520;
+    -fx-border-color: rgba(255,255,255,0.05);
+    -fx-border-width: 0 1 0 0;
+}
+
+.logoBox {
+    -fx-fill: #4f8ef7;
+}
+
+.logoIcon {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+
+.appName {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8eaf6;
+}
+
+.appSubtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6b7a99;
+}
+
+.featureText {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6b7a99;
+}
+
+.dotBlue   { -fx-fill: #4f8ef7; }
+.dotGreen  { -fx-fill: #28c840; }
+.dotPurple { -fx-fill: #7c5cfc; }
+
+/* ===== PANEL KANAN ===== */
+.rightPanel {
+    -fx-background-color: #1a1f2e;
+}
+
+.formTitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8eaf6;
+}
+
+.formSubtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7a99;
+}
+
+/* ===== FIELD LABEL ===== */
+.fieldLabel {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a0aec0;
+}
+
+/* ===== INPUT BOX (wrapper HBox) ===== */
+.inputBox {
+    -fx-background-color: #252b3d;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255,255,255,0.08);
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 4 12 4 12;
+}
+
+.inputBox:focused-within {
+    -fx-border-color: #4f8ef7;
+}
+
+.inputIcon {
+    -fx-font-size: 14px;
+}
+
+/* ===== TEXT FIELD & PASSWORD FIELD ===== */
+.inputField {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e8eaf6;
+    -fx-prompt-text-fill: #4b5572;
+    -fx-font-size: 13px;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 6 0 6 0;
+}
+
+.inputField:focused {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+/* ===== CHECKBOX ===== */
+.rememberCheck {
+    -fx-text-fill: #6b7a99;
+    -fx-font-size: 12px;
+}
+
+.rememberCheck .box {
+    -fx-background-color: #252b3d;
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.rememberCheck:selected .mark {
+    -fx-background-color: white;
+}
+
+.rememberCheck:selected .box {
+    -fx-background-color: #4f8ef7;
+    -fx-border-color: #4f8ef7;
+}
+
+/* ===== LINK LUPA PASSWORD ===== */
+.forgotLink {
+    -fx-font-size: 12px;
+    -fx-text-fill: #4f8ef7;
+    -fx-cursor: hand;
+}
+
+.forgotLink:hover {
+    -fx-underline: true;
+}
+
+/* ===== TOMBOL LOGIN ===== */
+.loginButton {
+    -fx-background-color: #4f8ef7;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 12 0 12 0;
+    -fx-border-width: 0;
+}
+
+.loginButton:hover {
+    -fx-background-color: #3a7ae0;
+}
+
+.loginButton:pressed {
+    -fx-background-color: #2d68cc;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ===== TEKS DAFTAR ===== */
+.registerText {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b7a99;
+}
+
+.registerLink {
+    -fx-font-size: 12px;
+    -fx-text-fill: #4f8ef7;
+    -fx-cursor: hand;
+}
+
+.registerLink:hover {
+    -fx-underline: true;
+}
