@@ -3,5 +3,218 @@
  */
 
 .mainFxmlClass {
+    /* ===== ROOT ===== */
+        .rootContainer {
+            -fx-background-color: #1a1f2e;
+        }
+    
+        /* ===== NAVBAR ===== */
+        .navbar {
+            -fx-background-color: #1e2540;
+            -fx-border-color: rgba(255, 255, 255, 0.06);
+            -fx-border-width: 0 0 1 0;
+        }
+    
+        .logoBox {
+            -fx-fill: #4f8ef7;
+        }
+    
+        .appName {
+            -fx-font-size: 14px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #e8eaf6;
+        }
+    
+        .navBtn {
+            -fx-background-color: rgba(255, 255, 255, 0.07);
+            -fx-text-fill: #a0aec0;
+            -fx-font-size: 12px;
+            -fx-background-radius: 20;
+            -fx-cursor: hand;
+            -fx-border-color: rgba(255, 255, 255, 0.1);
+            -fx-border-radius: 20;
+        }
+    
+        .navBtnActive {
+            -fx-background-color: #4f8ef7;
+            -fx-text-fill: white;
+            -fx-font-size: 12px;
+            -fx-background-radius: 20;
+            -fx-cursor: hand;
+            -fx-border-width: 0;
+        }
+    
+        .avatarCircle {
+            -fx-fill: #e05c5c;
+        }
+    
+        .avatarText {
+            -fx-text-fill: white;
+            -fx-font-size: 11px;
+            -fx-font-weight: bold;
+        }
+    
+        /* ===== HEADER ===== */
+        .pageTitle {
+            -fx-font-size: 16px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #e8eaf6;
+        }
+    
+        .pageSubtitle {
+            -fx-font-size: 12px;
+            -fx-text-fill: #6b7a99;
+        }
+    
+        /* ===== TOMBOL TAMBAH ===== */
+        .btnTambah {
+            -fx-background-color: #4f8ef7;
+            -fx-text-fill: white;
+            -fx-font-size: 12px;
+            -fx-font-weight: bold;
+            -fx-background-radius: 8;
+            -fx-cursor: hand;
+            -fx-padding: 9 16 9 16;
+            -fx-border-width: 0;
+        }
+    
+        .btnTambah:hover {
+            -fx-background-color: #3a7ae0;
+        }
+    
+        .btnTambah:pressed {
+            -fx-scale-x: 0.97;
+            -fx-scale-y: 0.97;
+        }
+    
+        /* ===== SEARCH ===== */
+        .searchBox {
+            -fx-background-color: #252b3d;
+            -fx-background-radius: 8;
+            -fx-border-color: rgba(255, 255, 255, 0.06);
+            -fx-border-radius: 8;
+            -fx-border-width: 1;
+            -fx-padding: 4 14 4 14;
+        }
+    
+        .searchIcon {
+            -fx-font-size: 13px;
+        }
+    
+        .searchField {
+            -fx-background-color: transparent;
+            -fx-text-fill: #e8eaf6;
+            -fx-prompt-text-fill: #4b5572;
+            -fx-font-size: 13px;
+            -fx-border-width: 0;
+            -fx-background-insets: 0;
+            -fx-padding: 6 0 6 0;
+        }
+    
+        .searchField:focused {
+            -fx-background-color: transparent;
+        }
+    
+        /* ===== TABEL ===== */
+        .tableView {
+            -fx-background-color: #1e2540;
+            -fx-border-color: rgba(255, 255, 255, 0.06);
+            -fx-border-radius: 10;
+            -fx-background-radius: 10;
+            -fx-table-cell-border-color: rgba(255, 255, 255, 0.04);
+        }
+    
+        .tableView .column-header-background {
+            -fx-background-color: #252b3d;
+            -fx-background-radius: 10 10 0 0;
+        }
+    
+        .tableView .column-header {
+            -fx-background-color: transparent;
+            -fx-border-width: 0;
+        }
+    
+        .tableView .column-header .label {
+            -fx-text-fill: #6b7a99;
+            -fx-font-size: 12px;
+            -fx-font-weight: bold;
+            -fx-alignment: CENTER_LEFT;
+        }
+    
+        .tableView .table-row-cell {
+            -fx-background-color: #1e2540;
+            -fx-border-color: rgba(255, 255, 255, 0.04);
+            -fx-border-width: 1 0 0 0;
+            -fx-table-cell-border-color: transparent;
+        }
+    
+        .tableView .table-row-cell:selected {
+            -fx-background-color: rgba(79, 142, 247, 0.15);
+        }
+    
+        .tableView .table-row-cell:hover {
+            -fx-background-color: rgba(255, 255, 255, 0.03);
+        }
+    
+        .tableView .table-cell {
+            -fx-text-fill: #e8eaf6;
+            -fx-font-size: 13px;
+            -fx-alignment: CENTER_LEFT;
+            -fx-padding: 10 16 10 16;
+        }
+    
+        /* ===== TOMBOL EDIT / HAPUS ===== */
+        .btnEdit {
+            -fx-background-color: rgba(246, 160, 65, 0.15);
+            -fx-text-fill: #f6a041;
+            -fx-font-size: 11px;
+            -fx-background-radius: 6;
+            -fx-cursor: hand;
+            -fx-border-width: 0;
+            -fx-padding: 5 10 5 10;
+        }
+    
+        .btnEdit:hover {
+            -fx-background-color: rgba(246, 160, 65, 0.3);
+        }
+    
+        .btnHapus {
+            -fx-background-color: rgba(224, 92, 92, 0.15);
+            -fx-text-fill: #e05c5c;
+            -fx-font-size: 11px;
+            -fx-background-radius: 6;
+            -fx-cursor: hand;
+            -fx-border-width: 0;
+            -fx-padding: 5 10 5 10;
+        }
+    
+        .btnHapus:hover {
+            -fx-background-color: rgba(224, 92, 92, 0.3);
+        }
+    
+        /* ===== PAGINATION ===== */
+        .infoLabel {
+            -fx-font-size: 12px;
+            -fx-text-fill: #6b7a99;
+        }
+    
+        .btnPage {
+            -fx-background-color: #252b3d;
+            -fx-text-fill: #6b7a99;
+            -fx-font-size: 12px;
+            -fx-background-radius: 6;
+            -fx-cursor: hand;
+            -fx-border-width: 0;
+            -fx-padding: 6 12 6 12;
+        }
+    
+        .btnPageActive {
+            -fx-background-color: #4f8ef7;
+            -fx-text-fill: white;
+            -fx-font-size: 12px;
+            -fx-background-radius: 6;
+            -fx-border-width: 0;
+            -fx-padding: 6 12 6 12;
+        }
 
 }

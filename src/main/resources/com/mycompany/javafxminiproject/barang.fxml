@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxminiproject.BarangController">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.javafxminiproject.BarangController">
     <stylesheets>
         <URL value="@/styles/barang.css"/>
     </stylesheets>
+    <children>
+        <VBox AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+              styleClass="rootContainer">
+            <!-- NAVBAR -->
+            <HBox prefHeight="52" alignment="CENTER_LEFT" spacing="12"
+                  styleClass="navbar">
+                <padding>
+                    <Insets left="20" right="20"/>
+                </padding>
+                <Rectangle width="28" height="28" arcWidth="12" arcHeight="12"
+                           styleClass="logoBox"/>
+                <Label text="MyApp" styleClass="appName"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Dashboard" onAction="#keDashboard"
+                        styleClass="navBtn"/>
+                <Button text="Barang" styleClass="navBtnActive"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <StackPane>
+                    <Circle radius="15" styleClass="avatarCircle"/>
+                    <Label text="AS" styleClass="avatarText"/>
+                </StackPane>
+            </HBox>
+            <!-- KONTEN UTAMA -->
+            <VBox VBox.vgrow="ALWAYS" spacing="16">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                <!-- Header + Tombol Tambah -->
+                <HBox alignment="CENTER_LEFT">
+                    <VBox spacing="4">
+                        <Label text="Data Barang" styleClass="pageTitle"/>
+                        <Label text="Kelola data barang" styleClass="pageSubtitle"/>
+                    </VBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="+ Tambah Barang" onAction="#handleTambah"
+                            styleClass="btnTambah"/>
+                </HBox>
+                <!-- Search -->
+                <HBox spacing="10" alignment="CENTER_LEFT" styleClass="searchBox">
+                    <Label text="🔍" styleClass="searchIcon"/>
+                    <TextField fx:id="searchField"
+                               promptText="Cari nama atau kode barang..."
+                               HBox.hgrow="ALWAYS"
+                               styleClass="searchField"
+                               onKeyReleased="#handleSearch"/>
+                </HBox>
+                <!-- TABEL -->
+                <TableView fx:id="tableBarang" VBox.vgrow="ALWAYS"
+                           styleClass="tableView">
+                    <columns>
+                        <TableColumn fx:id="colKode" text="Kode" prefWidth="90"/>
+                        <TableColumn fx:id="colNama" text="Nama Barang" prefWidth="200"/>
+                        <TableColumn fx:id="colKategori" text="Kategori" prefWidth="120"/>
+                        <TableColumn fx:id="colHarga" text="Harga" prefWidth="140"/>
+                        <TableColumn fx:id="colStok" text="Stok" prefWidth="80"/>
+                        <TableColumn fx:id="colAksi" text="Aksi" prefWidth="150"/>
+                    </columns>
+                </TableView>
+                <!-- Pagination -->
+                <HBox alignment="CENTER_RIGHT" spacing="8">
+                    <Label fx:id="labelInfo" text="Menampilkan data"
+                           styleClass="infoLabel"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="← Prev" onAction="#handlePrev"
+                            styleClass="btnPage"/>
+                    <Button fx:id="btnPage1" text="1" styleClass="btnPageActive"/>
+                    <Button fx:id="btnPage2" text="2" onAction="#handlePage2"
+                            styleClass="btnPage"/>
+                    <Button text="Next →" onAction="#handleNext"
+                            styleClass="btnPage"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </children>
 </AnchorPane>
